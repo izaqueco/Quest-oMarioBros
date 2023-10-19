@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class SuperMarioWorld {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Insira a quantidade de fases fáceis: ");
+        int fasesFaceis = scanner.nextInt();
+
+        int totalFases = 96;
+        int fasesDificeis = totalFases - fasesFaceis;
+
+        int horasFasesFaceis = fasesFaceis * 1;
+        int horasFasesDificeis = fasesDificeis * 2;
+
+        int totalHoras = horasFasesFaceis + horasFasesDificeis;
+
+        double custoPorHora = 5.0;
+        double custoTotal = totalHoras * custoPorHora;
+
+        System.out.println("Fases fáceis: " + fasesFaceis);
+        System.out.println("Fases difíceis: " + fasesDificeis);
+        System.out.println("Horas gastas em fases fáceis: " + horasFasesFaceis);
+        System.out.println("Horas gastas em fases difíceis: " + horasFasesDificeis);
+        System.out.println("Horas totais gastas para concluir o jogo: " + totalHoras);
+        System.out.println("Custo total do jogo: R$" + custoTotal);
+    }
+}
